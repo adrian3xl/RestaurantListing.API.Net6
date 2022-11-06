@@ -4,5 +4,7 @@
     {
         int id { get; set; }
         string name { get; set; }
+
+        public virtual IList<Resturant> Resturants { get; set; }
     }
 }

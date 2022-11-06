@@ -7,8 +7,11 @@ namespace RestaurantListing.API.Data
         public ResturantListingDBContext(DbContextOptions options) : base(options)
         {
 
-
         }
+
+
+        public DbSet<Resturant> Resturants { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
     }
 }
