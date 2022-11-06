@@ -1,9 +1,17 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using RestaurantListing.API.Data;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var ConnectionString = builder.Configuration.GetConnectionString("ResturantListingDBConnectionString");
+builder.Services.AddDbContext<ResturantListingDBContext>(options=> {
+    options.UseSqlServer(ConnectionString);
+    
+    
+    });
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
