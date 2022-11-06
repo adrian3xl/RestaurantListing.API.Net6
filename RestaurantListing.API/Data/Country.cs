@@ -2,8 +2,8 @@
 {
     public class Country
     {
-        int id { get; set; }
-        string name { get; set; }
+       public int Id { get; set; }
+       public string Name { get; set; }
 
         public virtual IList<Resturant> Resturants { get; set; }
     }

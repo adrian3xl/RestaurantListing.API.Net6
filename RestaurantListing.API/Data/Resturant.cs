@@ -4,17 +4,17 @@ namespace RestaurantListing.API.Data
 {
     public class Resturant
     {
-        int Id { get; set; }
+       public int Id { get; set; }
 
-        string Name { get; set; }
+     public   string Name { get; set; }
 
-        string Description { get; set; }
+      public  string Description { get; set; }
 
-        string Rating { get; set; }
+     public   string Rating { get; set; }
 
 
         [ForeignKey(nameof(CountryId))]
-        int CountryId { get; set; }
+      public  int CountryId { get; set; }
 
         public Country Country { get; set; }
 
