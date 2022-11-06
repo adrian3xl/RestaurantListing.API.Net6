@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantListing.API.Data;
 
@@ -10,9 +11,10 @@ using RestaurantListing.API.Data;
 namespace RestaurantListing.API.Migrations
 {
     [DbContext(typeof(ResturantListingDBContext))]
-    partial class ResturantListingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20221106152139_seededresturantsandcountries")]
+    partial class seededresturantsandcountries
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

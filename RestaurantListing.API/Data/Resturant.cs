@@ -12,6 +12,7 @@ namespace RestaurantListing.API.Data
 
      public   string Rating { get; set; }
 
+        public string Address { get; set; }
 
         [ForeignKey(nameof(CountryId))]
       public  int CountryId { get; set; }
